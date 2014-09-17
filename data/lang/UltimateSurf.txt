@@ -1,0 +1,26 @@
+[en]
+PLAYER_RESPAWNED	= You have been respawned.
+PLAYER_SP_ON		= You have spawn protection for %i seconds.
+PLAYER_SP_OFF		= You no longer have spawn protection. Be careful!
+
+VERSION_DISPLAY		= This server is running %s v%s%s by %s. Have Fun!
+CVARS_RELOADED		= All UltimatePlugin cvars have been reloaded.
+ERROR_ARGUMENTS_NUM	= ERROR: invalid number of arguments. See the commands usage.
+
+[es]
+PLAYER_RESPAWNED    = Has sido revivido.
+PLAYER_SP_ON        = Tienes proteccion de spawn por %i segundos.
+PLAYER_SP_OFF        = Ya no tienes la proteccion de spawn. Ten cuidado!
+
+VERSION_DISPLAY        = Este servidor utiliza %s v%s%s por %s. Diviertete!
+CVARS_RELOADED        = Todas las cvars de UltimatePlugin se han vuelto a cargar.
+ERROR_ARGUMENTS_NUM    = ERROR: numero de argumento invalido. Vea el uso del comandos.
+
+[fr]
+PLAYER_RESPAWNED    = Vous avez été respawn.
+PLAYER_SP_ON        = Vous êtes protégé pendant %i secondes.
+PLAYER_SP_OFF        = Vous n'êtes plus protégé. Attention!
+
+VERSION_DISPLAY        = Ce serveur utilise %s v%s%s par %s. Amusez-vous bien!
+CVARS_RELOADED        = Toutes les cvars d'UltimatePlugin ont été rechargées.
+ERROR_ARGUMENTS_NUM    = ERREUR: nombre d'arguments invalide. Vérifiez l'usage des commandes.
