@@ -259,6 +259,9 @@ public plugin_init( ) {
 	register_clcmd( "say_team /speed",	"ClCmd_Speed" );
 	register_clcmd( "say_team /version",	"ClCmd_Version" );
 	
+	register_clcmd( "menuselect",		"ClCmd_JoinTeam" );
+	register_clcmd( "joinclass",		"ClCmd_JoinTeam" );
+	
 	register_concmd( "amx_reloadcvars",	"ConCmd_ReloadCvars",	ADMIN_CVAR,				" - Reloads all the cvars of the plugin" );
 	
 	RegisterHam( Ham_Killed,		"player",		"Ham_Killed_Player_Post",		true );
@@ -336,6 +339,31 @@ public ClCmd_Speed( iPlayerID ) {
 
 public ClCmd_Version( iPlayerID ) {
 	Task_Advertisement( );
+}
+
+public ClCmd_JoinTeam( iPlayerID ) {
+	static m_iMenu = 205;
+	static m_iJoiningState = 121;
+	
+	static MENU_CHOOSEAPPEARANCE = 3;
+	static JOIN_CHOOSEAPPEARANCE = 4;
+	
+	if( get_pdata_int( iPlayerID, m_iMenu ) == MENU_CHOOSEAPPEARANCE && get_pdata_int( iPlayerID, m_iJoiningState ) == JOIN_CHOOSEAPPEARANCE ) {
+		new strCommand[ 11 ], strArgument[ 32 ];
+		
+		read_argv( 0, strCommand, charsmax( strCommand ) );
+		read_argv( 1, strArgument, charsmax( strArgument ) );
+		
+		engclient_cmd( iPlayerID, strCommand, strArgument );
+		
+		if( !CheckBit( g_bitIsAlive, iPlayerID ) ) {
+			ExecuteHamB( Ham_Spawn, iPlayerID );
+		}
+		
+		return PLUGIN_HANDLED;
+	}
+	
+	return PLUGIN_CONTINUE;
 }
 
 /* ConCmd */
