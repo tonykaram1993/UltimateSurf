@@ -62,8 +62,10 @@
 			+ added info at the end of the sma file
 			
 	v0.1.1	beta:	+ added a center message that tells the player that his spawn protection is off
+	
+	v0.1.2	beta:	+ added automatic revive on first connect
 */
-#define PLUGIN_VERSION		"0.1.1b"
+#define PLUGIN_VERSION		"0.1.2b"
 
 /* Includes */
 #include < amxmodx >
